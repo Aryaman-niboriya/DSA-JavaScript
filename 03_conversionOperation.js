@@ -21,3 +21,44 @@ console.log(booleanIsLoggedIn)
 let ssc = 100;
 let ssr = String(ssc);
 console.log(typeof ssr);
+
+
+//************** operations ****************
+
+console.log(1 + 2); // 3
+console.log("1" + "2"); // "12"
+console.log("1" + 2); // "12"
+console.log(1 + "2"); // "12"
+
+console.log(1 - 2); // -1
+console.log("1" - "2"); // -1
+console.log("1" - 2); // -1
+console.log(1 - "2"); // -1
+
+console.log(1 * 2); // 2
+console.log("1" * "2"); // 2
+console.log("1" * 2); // 2
+console.log(1 * "2"); // 2
+
+console.log(1 / 2); // 0.5
+console.log("1" / "2"); // 0.5
+console.log("1" / 2); // 0.5
+console.log(1 / "2"); // 0.5
+
+
+let gamecounter = 100;
+++gamecounter;
+console.log(gamecounter);
+
+//comparison operators
+
+console.log(null<0);// false
+console.log(null>0);// false
+console.log(null==0);// false
+console.log(null===0);// false
+
+console.log(undefined<0);// false
+console.log(undefined>0);// false
+console.log(undefined==0);// false
+console.log(undefined===0);// false
+
