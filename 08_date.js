@@ -1,0 +1,14 @@
+let mydate = new Date();
+console.log(mydate);
+console.log(mydate.getDate());
+console.log(mydate.getDay());
+console.log(mydate.getFullYear());
+console.log(mydate.getHours());
+console.log(mydate.getMinutes());
+console.log(mydate.getSeconds());
+console.log(mydate.toJSON());
+console.log(mydate.toDateString());
+console.log(mydate.toISOString());
+console.log(mydate.toLocaleDateString());
+console.log(mydate.toLocaleTimeString());
+console.log(Date.now());
