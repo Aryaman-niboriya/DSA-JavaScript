@@ -16,31 +16,34 @@ a.addEventListener("click",function(){//event listener
    a.style.backgroundColor="yellow"
 })
 
+// ...existing code...
 var bulb=document.querySelector("#bulb")
 var button=document.querySelector('#button')
 
-var flag = 0;
-if(flag==0){
-bulb.addEventListener("click",function(){
-    bulb.style.height="300px";
-    bulb.style.width="300px";
-    bulb.style.borderRadius= "50%";
-    bulb.style.border="4x solid #000";
-    bulb.style.backgroundColor = "blue";
-    flag=1
-})
-}else{
-    bulb.style.height="300px";
-    bulb.style.width="300px";
-    bulb.style.borderRadius= "50%";
-    bulb.style.border="4x solid #000";
-    bulb.style.backgroundColor = "transparent";
-    flag=0
-    }
+// replaced toggle logic with a single click listener that toggles styles and fixes typos (4px, camelCase)
+let flag = 0;
+if (!bulb) {
+    console.warn('No element with id "bulb" found');
+} else {
+    bulb.addEventListener("click", function () {
+        if (flag === 0) {
+            bulb.style.height = "300px";
+            bulb.style.width = "300px";
+            bulb.style.borderRadius = "50%";
+            bulb.style.border = "4px solid #000";
+            bulb.style.backgroundColor = "blue";
+            flag = 1;
+        } else {
+            // clear inline styles to revert to stylesheet/default values
+            bulb.style.height = "";
+            bulb.style.width = "";
+            bulb.style.borderRadius = "";
+            bulb.style.border = "";
+            bulb.style.backgroundColor = "transparent";
+            flag = 0;
+        }
+    });
+}
+// ...existing code...
 var h = document.querySelectorAll('h1')
 console.log(h)
-
-h.forEach(function(e){
-    console.log(e)
-
-})
