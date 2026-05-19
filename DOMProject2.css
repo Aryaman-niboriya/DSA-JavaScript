@@ -1,0 +1,99 @@
+/* basic, simple styles for BMI Calculator */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background:#f2f6fb;
+  color:#222;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+
+/* top nav (kept simple) */
+nav{
+  position:fixed;
+  top:12px;
+  left:12px;
+}
+nav a{
+  color:#0b69ff;
+  text-decoration:none;
+  margin-right:10px;
+  font-weight:600;
+}
+nav a:hover{opacity:.85}
+
+/* main card */
+.container{
+  width:min(420px,94vw);
+  background:#fff;
+  padding:22px;
+  border-radius:10px;
+  box-shadow:0 8px 24px rgba(2,6,23,0.06);
+  text-align:left;
+}
+
+/* headings */
+.container h1{
+  text-align:center;
+  margin-bottom:14px;
+  font-size:1.3rem;
+}
+
+/* form rows */
+.container p{
+  margin:10px 0;
+}
+.container label{
+  display:block;
+  font-size:0.95rem;
+  margin-bottom:6px;
+  color:#333;
+}
+.container input[type="text"]{
+  width:100%;
+  padding:10px 12px;
+  border-radius:6px;
+  border:1px solid #dfe6ee;
+  font-size:1rem;
+}
+
+/* button */
+#calculate{
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  background:#0b69ff;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:700;
+}
+#calculate:hover{opacity:.95}
+
+/* result and guide */
+#results{
+  margin-top:12px;
+  text-align:center;
+  font-weight:700;
+  color:#0b69ff;
+}
+#Weight-guid{
+  margin-top:16px;
+  background:#f8fafc;
+  padding:10px;
+  border-radius:6px;
+  border:1px solid #eef2f6;
+}
+#Weight-guid h3{margin-bottom:8px;font-size:1rem}
+#Weight-guid p{margin:6px 0;color:#555;font-size:0.95rem}
+
+/* responsive */
+@media (max-width:420px){
+  .container{padding:16px}
+  nav{left:8px;top:8px}
+}
