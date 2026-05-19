@@ -1,0 +1,77 @@
+/* basic, clean styles for clock watch page */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+  background: linear-gradient(180deg,#eef2ff 0%, #f8fbff 100%);
+  color:#0b1220;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:32px;
+}
+
+/* top nav */
+nav{
+  position:fixed;
+  top:14px;
+  left:14px;
+}
+nav a{
+  color:#0b69ff;
+  text-decoration:none;
+  margin-right:10px;
+  font-weight:600;
+}
+nav a:hover{opacity:.9}
+
+/* center container */
+.center{
+  width:min(520px,94vw);
+  text-align:center;
+}
+
+/* banner */
+#banner{
+  background:#ffffff;
+  display:inline-block;
+  padding:10px 18px;
+  border-radius:999px;
+  box-shadow:0 6px 20px rgba(11,105,255,0.08);
+  margin-bottom:18px;
+  font-weight:600;
+  color:#0b69ff;
+  letter-spacing:0.2px;
+}
+
+/* clock display */
+#clock{
+  width:320px;
+  height:320px;
+  margin:0 auto;
+  border-radius:50%;
+  background:linear-gradient(145deg,#ffffff,#e9f0ff);
+  box-shadow:
+    inset 0 6px 18px rgba(11,105,255,0.04),
+    0 18px 40px rgba(2,6,23,0.08);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:3.2rem;
+  font-weight:700;
+  color:#0b1220;
+}
+
+/* small hint for JS-updated time inside clock */
+#clock span{
+  display:block;
+  font-size:1.6rem;
+  opacity:0.95;
+}
+
+/* responsive */
+@media (max-width:420px){
+  #clock{width:240px;height:240px;font-size:2.2rem}
+  .center{padding:8px}
+  nav{left:8px;top:8px}
+}
